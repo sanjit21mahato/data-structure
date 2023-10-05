@@ -1,24 +1,27 @@
 package practice;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class Test {
 
 	public static void main(String[] args) {
-		int arr[] = { 1, 1, 0, 0, 0, 1, 0, 0 };
-		int n =arr.length;
-		for(int i=1;i<arr.length;i++){
-			if(arr[i]!=arr[i-1]){
-				if(arr[i]!=arr[0]){
-					System.out.println("from index:"+i);
-				}else{
-					System.out.println("To index:"+(i-1));
-				}
+		int arr1[] = {3,5,7,8};
+		int arr2[]	= {3,3,4,5,5};
+		List<Integer>list = new ArrayList<>();
+		for(int i=0,j=0; i<arr1.length && j<arr2.length; ){
+			if(arr1[i]<arr2[j]){
+				i++;
+			}else if(arr1[i]>arr2[j]){
+				j++;
+			}else {
+				list.add(arr1[i]);
+				i++;
+				j++;
 			}
 		}
-	   if(arr[n-1]!=arr[0]){
-		   System.out.println("To Index:"+ (n-1));
-	   }
+		System.out.println(list);
 	}
 
 	
