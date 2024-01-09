@@ -1,4 +1,4 @@
-package difficult;
+package easy;
 
 /*
 I/P: text = "ABCABCD"

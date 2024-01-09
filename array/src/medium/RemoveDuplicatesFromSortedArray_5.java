@@ -39,7 +39,6 @@ public class RemoveDuplicatesFromSortedArray_5 {
 		
 		int outputSize=1;
 		for(int i=1;i<arr.length;i++){
-			//if(arr[i]!=arr[i-1]){
 			if(arr[i]!=arr[outputSize-1]){
 				arr[outputSize] = arr[i];
 				outputSize++;

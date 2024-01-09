@@ -1,4 +1,4 @@
-package external.conceptcoding;
+package conceptCoding;
 
 import java.util.ArrayList;
 import java.util.Arrays;
