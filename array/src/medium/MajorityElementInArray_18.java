@@ -18,7 +18,7 @@
    second phase is required only when there is no majority element.
    If question says that there is a majority element in the array then 2nd phase is not required.
   */
-package difficult;
+package medium;
 
 /**
  * @author sanjit
@@ -42,7 +42,7 @@ public class MajorityElementInArray_18 {
 	private static int findMajorityElement(int[] arr) {
 		//1st pahse
         int n= arr.length;
-        int majorityElement = 0;
+        int majorityElement = arr[0];
         int count =1;
         for(int i=1; i<n;i++){
         	if(arr[i] ==majorityElement){

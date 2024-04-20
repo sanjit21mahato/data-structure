@@ -1,4 +1,4 @@
-package difficult;
+package medium;
 
 import java.util.Set;
 import java.util.TreeSet;

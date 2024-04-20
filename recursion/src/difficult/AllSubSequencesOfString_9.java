@@ -19,7 +19,7 @@ public class AllSubSequencesOfString_9 {
 			String s = "AB";
 			//printSubSets(s);
 			//printSubSets(s,"",0);
-			print(s, "");
+			printSubSequences(s, "");
 
 		}
 		//without using recursion
@@ -33,28 +33,29 @@ public class AllSubSequencesOfString_9 {
 
 		}*/
 
-		private static void printSubSets(String s, String current, int i) {
+		private static void printSubSets(String s, String current, int count) {
 			
-			if(s.length()==i){
+			if(s.length()==count){
 				System.out.println(current);
 				return;
 			}
 			//not include character
-			printSubSets(s,current,i+1);
+			printSubSets(s,current,count+1);
 			//include character
-			printSubSets(s,current+s.charAt(i),i+1);
+			printSubSets(s, current+s.charAt(count), count+1);
 			
 		}
 		
-		 private static void print(String s, String substring) {
+		 private static void printSubSequences(String s, String substring) {
 				if(s.length()==0){
 					System.out.println(substring);
 					return;
 				}
-				//include character
-				print(s.substring(1),substring+ s.charAt(0));
 				//not include character
-				print(s.substring(1),substring);
+				printSubSequences(s.substring(1), substring);
+				//include character
+				printSubSequences(s.substring(1), substring+s.charAt(0));
+				
 				
 			}
 }

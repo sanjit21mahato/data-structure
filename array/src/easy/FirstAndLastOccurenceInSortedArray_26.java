@@ -6,7 +6,7 @@ x=3;
 first occurence = 2
 last occurence = 5	
 */
-package medium;
+package easy;
 
 /**
  * @author sanjit

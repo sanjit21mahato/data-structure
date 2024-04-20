@@ -27,6 +27,7 @@ public class ReverseWordsInString_7 {
 		
 		//String res = reverseWordsInStringWithAuxillarySpace(s1);
 		//System.out.println(res);
+		//System.out.println(s1);
 
 	}
     
@@ -38,7 +39,6 @@ public class ReverseWordsInString_7 {
 				reverse(str, left, i-1);
 				left = i+1;
 			}
-			
 		}
 		//explicitly reversing the last word since for last word we may not find space
 		reverse(str,left,n-1);

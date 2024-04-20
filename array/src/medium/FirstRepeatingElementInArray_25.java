@@ -6,7 +6,7 @@ o/p : 10
 
 //Notes : use LinkedHashMap as it maintains insertion order
 */
-package easy;
+package medium;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -17,7 +17,6 @@ import java.util.Map;
  */
 public class FirstRepeatingElementInArray_25 {
 
-	
 	public static void main(String[] args) {
 		int arr[] = {10,5,3,4,3,5,10};
 		LinkedHashMap<Integer, Integer> map = new LinkedHashMap<>();

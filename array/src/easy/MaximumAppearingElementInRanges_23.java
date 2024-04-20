@@ -29,28 +29,22 @@ public class MaximumAppearingElementInRanges_23 {
 	 
 	 int maxAppearingElement = findMaxAppearinglement(L,R);
 	 System.out.println(maxAppearingElement);
-	 
-	 
-
 	}
 
 	private static int findMaxAppearinglement(int[] L, int[] R) {
-					   
-		    int freq[] = new int[100];
-		    
-		    for(int i=0; i<L.length;i++){
-		    	for(int j=L[i];j<=R[i];j++){
-		    		freq[j]++;
-		    	}
-		    }
-	        
-	       int maxIndex=0;
-	       for(int i=0;i<freq.length;i++){
-	    	   if(freq[i]>freq[maxIndex]){
-	    		   maxIndex =i;
-	    	   }
-	       }
-	       return maxIndex;
+		int freq[] = new int[100];
+		for (int i = 0; i < L.length; i++) {
+			for (int j = L[i]; j <= R[i]; j++) {
+				freq[j]++;
+			}
 		}
+		int maxIndex = 0;
+		for (int i = 0; i < freq.length; i++) {
+			if (freq[i] > freq[maxIndex]) {
+				maxIndex = i;
+			}
+		}
+		return maxIndex;
+	}
 
 }

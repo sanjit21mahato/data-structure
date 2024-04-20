@@ -26,7 +26,6 @@ public class EqulibriumIndexofAnArray_22 {
 		int arr[] = { -7, 1, 5, 2, -4, 3, 0 };
 		// int arr[] = {4,2,-2};
 		// int arr[] = {4,1,8};
-		
 		boolean isEquilibriumPoint = checkEquilibriumIndex(arr);
 		System.out.println(isEquilibriumPoint);
 		

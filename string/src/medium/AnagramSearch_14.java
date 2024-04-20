@@ -9,7 +9,7 @@ I/P: "geeksforgeeks"
 pattern: "rseek"
 O/P: No
 */
-package difficult;
+package medium;
 
 /**
  * @author sanjit
@@ -19,7 +19,7 @@ public class AnagramSearch_14 {
 
 	public static void main(String[] args) {
 		String text = "geeksforgeeks";
-		String pattern = "frod";
+		String pattern = "frog";
 		boolean isAnagramSearchPresent = checkAnagramEfficient(text,pattern);
 		//boolean isAnagramSearchPresent = chekcAnagramSearchNaive(text,pattern);
         System.out.println(isAnagramSearchPresent);

@@ -42,7 +42,7 @@ import java.util.Arrays;
 public class ConstructLPSArray_11 {
 
 	public static void main(String[] args) {
-		String s1 = "aabaaba";
+		String s1 = "aba$aabaaba";
 		int lpsArr[] = constructLpsArray(s1);
 		System.out.println(Arrays.toString(lpsArr));
 		

@@ -7,7 +7,7 @@
 	 * O/P = 5 
 	 * int arr[] = {3,2,1}; O/P = 0
 	 */
-package medium;
+package easy;
 
 import java.util.Arrays;
 

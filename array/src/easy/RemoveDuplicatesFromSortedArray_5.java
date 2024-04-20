@@ -1,7 +1,7 @@
 /**
  * 
  */
-package medium;
+package easy;
 
 import java.util.Arrays;
 

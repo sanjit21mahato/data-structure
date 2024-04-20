@@ -6,16 +6,13 @@
 package easy;
 
 /**
- * @author sanji
+ * @author sanjit
  *
  */
 public class SquareRoot_24 {
 
-
-
-
 	public static void main(String[] args) {
-		int n = 134;
+		int n = 81;
 		int squareRoot = findSquareRootIterative(n);
 		if(squareRoot==-1){
 			System.out.println("No perferct square root");

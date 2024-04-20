@@ -23,7 +23,7 @@ public class LeftMostRepeatingCharacter_3 {
 
 	private static void printLeftMostRepeatingCharacter(String s1) {
 		
-		int freq[] = new int[26];
+		/*int freq[] = new int[26];
 		for(int i=0;i<s1.length();i++){
 			freq[s1.charAt(i)-'a']++;
 		}
@@ -33,9 +33,9 @@ public class LeftMostRepeatingCharacter_3 {
 				System.out.println((char)(i+'a'));
 				break;
 			}
-		}
+		}*/
 		
-		/*int freq[] = new int[255];
+		int freq[] = new int[255];
 		for(int i=0;i<s1.length();i++){
 			freq[s1.charAt(i)]++;
 		}
@@ -44,7 +44,7 @@ public class LeftMostRepeatingCharacter_3 {
 				System.out.println(s1.charAt(i));
 				break;
 			}
-		}*/
+		}
 	}
 
 }

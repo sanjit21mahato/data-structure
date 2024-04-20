@@ -6,7 +6,9 @@
  */
 package easy;
 
+import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Map;
 import java.util.Set;
 
 /**
@@ -23,7 +25,7 @@ public class PairWithGivenSum_27 {
 	}
 
 	private static void findPairWithGivenSum(int[] arr, int x) {
-
+		
 		Set<Integer> set = new HashSet<>();
 		for (int i = 0; i < arr.length; i++) {
 			if (set.contains(x - arr[i])) {

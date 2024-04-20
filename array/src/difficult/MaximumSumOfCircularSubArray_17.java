@@ -6,7 +6,7 @@ two solutions:
 First : O(n2)
 Second : O(n)
 
-Max of maximum sum of Normal SubArray and max sum of only Circular SubArray
+Max of maximum sum of Normal SubArray and maximum sum of only Circular SubArray
 
 To find the maxsum of only circular subArray 
  ArraySum - minimum sum sub array

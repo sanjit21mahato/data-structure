@@ -23,8 +23,8 @@ package medium;
 public class MinimumConsecutiveFlipsToMakeBinaryArraySame_19 {
 
 	public static void main(String[] args) {
-		//int arr[] = { 1, 1, 0, 0, 0, 1 };
-		int arr[] ={1,0,0,0,1,0,0,1,1,1,1};
+		int arr[] = { 1, 1, 0, 0, 1, 0 };
+		//int arr[] ={1,0,0,0,1,0,0,1,1,1,1};
 		printMinimumConsecutiveFlips(arr);
 
 	}
@@ -44,6 +44,23 @@ public class MinimumConsecutiveFlipsToMakeBinaryArraySame_19 {
 		if(arr[n-1]!=arr[0]){
            System.out.println("To index:"+ (n-1));
 		}
+		
+		//Anther way
+		/*boolean fromIndex = false;
+		for (int i = 1; i < arr.length; i++) {
+			if (arr[i] != arr[i - 1]) {
+				if (fromIndex) {
+					System.out.println("To Index" + (i - 1));
+					fromIndex = false;
+				} else {
+					System.out.println("From Index" + i);
+					fromIndex = true;
+				}
+			}
+		}
+		if (fromIndex) {
+			System.out.println("To Index" + (arr.length - 1));
+		}*/
 	}
 
 }
