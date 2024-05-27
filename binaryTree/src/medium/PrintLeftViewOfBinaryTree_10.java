@@ -2,10 +2,12 @@
  * 
  * Solution1 : Recurssive
  * Solution2 : Iterative */
-package easy;
+package medium;
 
 import java.util.LinkedList;
 import java.util.Queue;
+
+import easy.Node;
 
 /**
  * @author sanjit
@@ -51,7 +53,29 @@ public class PrintLeftViewOfBinaryTree_10 {
 				
 			}
 		}
-	
+		
+		/*Queue<Node> q = new LinkedList<Node>();
+		if(root==null)return;
+		else{
+			q.add(root);
+			q.add(null);
+			System.out.println(root.data);
+			while(q.size()>1){
+                Node cn= q.poll();
+                if(cn==null){
+                	System.out.println(q.peek().data);
+                	q.add(null);
+                }else{
+                	if(cn.left!=null){
+                		q.add(cn.left);
+                	}
+                	if(cn.right!=null){
+                		q.add(cn.right);
+                	}
+                }
+			}
+		}*/
+		
 	}
 
 }

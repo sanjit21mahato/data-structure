@@ -36,7 +36,7 @@ public class TreeTraversal_1 {
 		
 	}
 	
-	private static void inOrderTraversal(Node root) {
+	public static void inOrderTraversal(Node root) {
 		/*if(root==null)
 		return;*/
 		if (root != null) {

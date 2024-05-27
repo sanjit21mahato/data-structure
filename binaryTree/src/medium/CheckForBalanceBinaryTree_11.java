@@ -14,22 +14,58 @@ import easy.Node;
 public class CheckForBalanceBinaryTree_11 {
 
 	public static void main(String[] args) {
-		Node root = new Node(10);
+		/*Node root = new Node(10);
 		root.left = new Node(20);
 		root.right = new Node(30);
 		root.left.left = new Node(40);
-		root.left.left.left = new Node(50);
-		/*
-		 * this method returns -1 for unbalanced binary tree here if res =-1
-		 * then it is not balanced for non-negative value it is balanced
-		 */
-		int res	= checkForBalancedBTree(root);
-		if(res<0){
-			System.out.println("B Tree is not balanced");
-		}else{
-			System.out.println("B Tree is Balanced");
-		}
+		root.left.left.left = new Node(50);*/
+	
+		/*Node root = new Node(0);
+		root.left = new Node(2);
+		root.left.left = new Node(4);
+		root.left.left.left = new Node(5);*/
+		
+		Node root = new Node(0);
+		root.left = new Node(2);
+		root.right = new Node(4);
+		root.left.left = new Node(1);
+		root.right.left = new Node(3);
+		root.right.right = new Node(-1);
+		root.left.left.left= new Node(5);
+		root.left.left.right= new Node(1);
+		/*root.right.left.right = new Node(6);
+		root.right.right.right= new Node(8);*/
+		
+		boolean isBalancedTree =checkBalanced(root);
+		System.out.println(isBalancedTree);
 
+	}
+
+	private static boolean checkBalanced(Node root) {
+		
+		int height=chekHeights(root);
+		if(height<0){
+			return false;
+		}else{
+			return true;
+		}
+	}
+	
+	private static int chekHeights(Node root) {
+		if(root==null){
+			return 0;
+		}
+		int lh = chekHeights(root.left);
+		if(lh==-1)return -1;
+        int rh = chekHeights(root.right);
+        if(rh==-1)return -1;
+        if(Math.abs(lh-rh)>1){
+			return -1;
+        }
+        else{
+		    return 1+Math.max(lh, rh);
+        }
+		
 	}
 
 	private static int checkForBalancedBTree(Node root) {

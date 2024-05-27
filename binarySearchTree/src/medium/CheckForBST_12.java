@@ -18,7 +18,7 @@ For right child of node change the lower bound as node's value
 Another interesting efficient solution
 If in order traversal of a BST is in increasing order then it Self Balanced BST
  */
-package difficult;
+package medium;
 
 import easy.Node;
 

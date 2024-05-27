@@ -31,27 +31,27 @@ public class TreeTravesalSpiralForm_14 {
 		}
 		Stack<Node> s1 = new Stack<>();
 		Stack<Node> s2 = new Stack<>();
-		s1.add(root);
+		s1.push(root);
 		while(s1.isEmpty()==false || s2.isEmpty()==false){
 			
 			while(s1.isEmpty()==false){
 				Node currentNode= s1.pop();
 				System.out.println(currentNode.data);
 				if(currentNode.left!=null){
-					s2.add(currentNode.left);
+					s2.push(currentNode.left);
 				}
 				if(currentNode.right!=null){
-					s2.add(currentNode.right);
+					s2.push(currentNode.right);
 				}
 			}
 			while(s2.isEmpty()==false){
 				Node currentNode= s2.pop();
 				System.out.println(currentNode.data);
 				if(currentNode.right!=null){
-					s1.add(currentNode.right);
+					s1.push(currentNode.right);
 				}
 				if(currentNode.left!=null){
-					s1.add(currentNode.left);
+					s1.push(currentNode.left);
 				}
 			}
 			

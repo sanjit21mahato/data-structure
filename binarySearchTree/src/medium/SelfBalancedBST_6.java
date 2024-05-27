@@ -12,7 +12,7 @@ If we can maintain the height as logn instead of n ,
  Rotation is just O(1) operation
  
  AVL Tree and Red Black Tree are two common self Balanced BST
- AVL Tree is restrict in balancing
+ AVL Tree is strict in balancing
  Red Black Tree is loose in Balancing so it has advantage of less restructuring
  Red Black Tree is more commonly used
  In java library Tree Set and Tree map , Red Black Tree is used.

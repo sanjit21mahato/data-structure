@@ -16,17 +16,16 @@ public class PrintNodeAtDistanceK_5 {
 
 	private static void printNodeAtDistanceK(Node root, int k) {
 
-     if(root==null){
-    	 return;
-     }
-     
-     if(k==0){
-    	 System.out.println(root.data);
-     }else{
-    	 printNodeAtDistanceK(root.left, k-1);
-    	 printNodeAtDistanceK(root.right, k-1);
-     }
-		
+		if (root == null) {
+			return;
+		}
+		if (k == 0) {
+			System.out.println(root.data);
+		} else {
+			printNodeAtDistanceK(root.left, k - 1);
+			printNodeAtDistanceK(root.right, k - 1);
+		}
+
 	}
 
 }

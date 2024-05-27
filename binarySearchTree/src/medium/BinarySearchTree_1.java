@@ -17,7 +17,7 @@ In Balanced BST, these operations are O(logn)
 
 */
 
-package difficult;
+package medium;
 
 public class BinarySearchTree_1 {
 
@@ -89,53 +89,9 @@ public class BinarySearchTree_1 {
 		boolean isPresent =tree.search(60);
 		System.out.println(isPresent);
 		
-		//tree.delete(30);
-		tree.deleteCheck(30);
+		tree.delete(30);
 		tree.inorder();
 	}
-	
-	private void deleteCheck(int data) {
-		
-		Node n = deleteOper(root,data);
-	}
-	
-	private Node deleteOper(Node root, int data) {
-		
-		if(root==null){
-			return null;
-		}
-		if(root.key==data){
-			
-			Node n =findSuccessorOp(root.right);
-			root.key = n.key;
-			
-			
-		}
-		else if(root.key>data){
-			root.left = deleteOper(root.left,data);
-		}
-		else if(root.key<data){
-			root.right = deleteOper(root.right,data);
-		}
-		
-		return null;
-	}
-	private Node findSuccessorOp(Node root) {
-		if(root.left==null){
-			return root;
-		}
-		return findSuccessorOp(root.left);
-	}
-	
-	
-	
-	
-	
-	
-	
-
-	
-
 	
 
 	private Node deleteInBST(Node root, int x) {

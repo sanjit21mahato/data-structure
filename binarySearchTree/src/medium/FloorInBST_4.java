@@ -20,6 +20,7 @@ public class FloorInBST_4 {
 		root.right.right = new Node(30);
 
 		Node floor = findFloorOfBST(root, 23);
+		System.out.println(res.key);
 
 	}
 

@@ -1,7 +1,9 @@
 /*
  * Using height function we can get diameter of B Tree
  * */
-package easy;
+package medium;
+
+import easy.Node;
 
 /**
  * @author sanjit
@@ -16,8 +18,8 @@ public class DiameterOfBTree_13 {
 		root.left = new Node(20);
 		root.right = new Node(30);
 		root.left.left = new Node(9);
-		root.left.right = new Node(13);
-		root.left.left.left = new Node(6);
+		//root.left.right = new Node(13);
+		//root.left.left.left = new Node(6);
 		//res is height of B tree
 		int res = findDiameterOfBTree(root);
 		System.out.println(diameter);

@@ -33,7 +33,6 @@ public class ChildrenSumProperty_12 {
 			if (root.right != null) {
 				sum = sum + root.right.data;
 			}
-
 			return (root.data == sum && checkForChidrenSum(root.left) && checkForChidrenSum(root.right));
 		}
 
