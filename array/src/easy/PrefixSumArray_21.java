@@ -28,7 +28,8 @@ public class PrefixSumArray_21 {
 	private static void calPrefixSumArray(int[] arr) {
        int prefixSum = arr[0];
        for(int i= 1;i<arr.length;i++){
-    	   prefixSum = arr[i-1]+arr[i];
+    	   //prefixSum = arr[i-1]+arr[i];
+    	   prefixSum = prefixSum+arr[i];
     	   arr[i]=prefixSum;
        }
 	}

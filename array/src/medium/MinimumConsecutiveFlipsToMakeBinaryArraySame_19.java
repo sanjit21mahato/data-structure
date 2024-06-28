@@ -39,7 +39,6 @@ public class MinimumConsecutiveFlipsToMakeBinaryArraySame_19 {
                     System.out.println("To Index:"+ (i-1));
 				}
 			}
-
 		}
 		if(arr[n-1]!=arr[0]){
            System.out.println("To index:"+ (n-1));

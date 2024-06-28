@@ -19,11 +19,10 @@ public class PatternSearchUsingKMP_12 {
         
         for(int i=0;i<LPS.length;i++){
         	if(LPS[i]==pattern.length()){
-        		System.out.println((i-m-1-m)+1);
+        		System.out.println("Starting index:"+(i-m-1-m)+1);
         	}
         }
         
-
 	}
 
 	private static int[] constructLPSArray(String s1) {

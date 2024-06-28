@@ -53,13 +53,11 @@ public class ReverseDoublyLinkedList_11 {
 		
 		Node currentNode = head;
 		Node previous =null;
-	
 		while(currentNode!=null){
 		 previous = currentNode.previous;
 		 currentNode.previous = currentNode.next;
 		 currentNode.next=previous;
 		 currentNode = currentNode.previous;
-			
 		}
 		return previous.previous;
 	}

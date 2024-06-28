@@ -7,8 +7,8 @@ import java.util.Arrays;
 
  */
 
-/*arr[] ={8,5,0,10,0,20}
-o/p :    {8,5,10,20,0,0}
+/*arr[] = {8,5,0,10,0,20}
+o/p :     {8,5,10,20,0,0}
 
 One traversal 
 O(n)

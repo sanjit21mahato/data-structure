@@ -16,11 +16,13 @@ public class CircularLinkedListTraversal_16 {
 	protected static void traverseCircularLinkedList(Node head) {
 		if (head != null) {
 			Node currentNode = head;
-			System.out.println(currentNode.data);
+			//System.out.println(currentNode.data);
 			while (currentNode.next != head) {
-				currentNode = currentNode.next;
 				System.out.println(currentNode.data);
+				currentNode = currentNode.next;
 			}
+			System.out.println(currentNode.data);	
+				
 
 		}
 	}

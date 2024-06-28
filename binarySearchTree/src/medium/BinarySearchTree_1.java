@@ -38,8 +38,6 @@ public class BinarySearchTree_1 {
 		root = null;
 	}
 
-	// BinarySearchTree_1(int value) { root = new Node(value); }
-
 	void insert(int key) {
 		root = insertRec(root, key);
 	}
@@ -76,20 +74,18 @@ public class BinarySearchTree_1 {
 	public static void main(String[] args) {
 		BinarySearchTree_1 tree = new BinarySearchTree_1();
 
-		tree.insert(50);
-		tree.insert(30);
 		tree.insert(20);
-		tree.insert(40);
-		tree.insert(70);
-		tree.insert(60);
-		tree.insert(80);
+		tree.insert(15);
+		tree.insert(25);
+		tree.insert(10); 
+		tree.insert(30);
 
 		
 		
-		boolean isPresent =tree.search(60);
+		/*boolean isPresent =tree.search(60);
 		System.out.println(isPresent);
-		
-		tree.delete(30);
+		*/
+		tree.delete(10);
 		tree.inorder();
 	}
 	
@@ -98,7 +94,7 @@ public class BinarySearchTree_1 {
 		if (root == null) {
 			return null;
 		}
-		if (x < root.key) {
+		else if (x < root.key) {
 			root.left = deleteInBST(root.left, x);
 		} else if (x > root.key) {
 			root.right = deleteInBST(root.right, x);

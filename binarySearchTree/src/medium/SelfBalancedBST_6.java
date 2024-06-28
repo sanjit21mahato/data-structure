@@ -8,7 +8,7 @@ If we can maintain the height as logn instead of n ,
  If we know keys in advance we can make a perfectly Balanced BST
  How to keep it Balanced if random insertion/deletion happens?
  So, idea would be do to restructuring or re balancing when insertion and deletion happens
- The restructing is called rotation i.e.left rotation or right rotation depending on BST
+ The restructuring is called rotation i.e.left rotation or right rotation depending on BST
  Rotation is just O(1) operation
  
  AVL Tree and Red Black Tree are two common self Balanced BST

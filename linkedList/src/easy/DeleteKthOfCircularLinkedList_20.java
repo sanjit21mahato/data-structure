@@ -10,7 +10,7 @@ public class DeleteKthOfCircularLinkedList_20 {
 
 		// traverse(head);
 
-		head = deleteKthNode(head, 0);
+		head = deleteKthNode(head, 1);
 		CircularLinkedListTraversal_16.traverseCircularLinkedList(head);
 
 	}

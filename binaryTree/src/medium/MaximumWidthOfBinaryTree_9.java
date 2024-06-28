@@ -27,12 +27,35 @@ public class MaximumWidthOfBinaryTree_9 {
 		root.left.right = new Node(50);
 		root.right.left = new Node(60);
 		
-		findMaxWidthOfBTree(root);
-		findMaxWidthOfBtree1(root);
+		findMaxWidthOfBTreeUsingTraversal(root);
+		//findMaxWidthOfBTree(root);
+		//findMaxWidthOfBtree1(root);
 		System.out.println(maxWidth);
 		
 
 	}	
+
+	private static void findMaxWidthOfBTreeUsingTraversal(Node root) {
+		if(root==null){
+        	return;
+        }
+        Queue<Node> q = new LinkedList<>();
+		q.add(root);
+		while (q.isEmpty()==false) {
+			int size = q.size();
+			maxWidth =Math.max(size, maxWidth);
+			for(int i=0;i<size;i++){
+				Node currentNode = q.poll();
+				if (currentNode.left != null) {
+					q.add(currentNode.left);
+				}
+				if (currentNode.right != null) {
+					q.add(currentNode.right);
+				}
+			}
+		}
+		
+	}
 
 	private static void findMaxWidthOfBTree(Node root) {
 		
@@ -58,25 +81,6 @@ public class MaximumWidthOfBinaryTree_9 {
 					}
 				}
 			}
-		
-       /* if(root==null){
-        	return;
-        }
-        Queue<Node> q = new LinkedList<>();
-		q.add(root);
-		while (q.isEmpty()==false) {
-			int size = q.size();
-			maxWidth =Math.max(size, maxWidth);
-			for(int i=0;i<size;i++){
-				Node currentNode = q.poll();
-				if (currentNode.left != null) {
-					q.add(currentNode.left);
-				}
-				if (currentNode.right != null) {
-					q.add(currentNode.right);
-				}
-			}
-		}*/
 		
 	
 	}

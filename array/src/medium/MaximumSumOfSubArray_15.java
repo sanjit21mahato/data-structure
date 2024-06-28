@@ -33,7 +33,7 @@ public class MaximumSumOfSubArray_15 {
 	}
 
 	// kadane algorithm
-	private static int findMximumSumOfSubArray(int[] arr) {
+	private static int findMximumSumOfSubArray(int[] arr) {/*
 		int n = arr.length;
 		int maxSum = arr[0];
 		int maxEndingAtIndex = arr[0];
@@ -42,6 +42,18 @@ public class MaximumSumOfSubArray_15 {
 			maxSum = Math.max(maxSum, maxEndingAtIndex);
 		}
 		return maxSum;
+	*/
+		
+		int maxEndingAtPreIndex=arr[0];
+		int maxSum= arr[0];
+		for(int i=1; i<arr.length;i++){
+			int maxEndingAtIndex = Math.max(arr[i], arr[i]+maxEndingAtPreIndex);
+			maxSum = Math.max(maxSum, maxEndingAtIndex);
+			maxEndingAtPreIndex = maxEndingAtIndex; 
+			
+		}
+		return maxSum;
+	
 	}
 
 	/*private static int findMximumSumOfSubArray(int[] arr) {

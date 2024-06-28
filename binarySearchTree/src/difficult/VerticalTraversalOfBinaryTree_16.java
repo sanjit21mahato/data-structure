@@ -96,13 +96,13 @@ public class VerticalTraversalOfBinaryTree_16 {
 			verticalTraversalOfBinaryTree(root.left, hd-1, map);
 		}
 		Stack<Integer> s1 = new Stack<>();
-		Stack<Integer> maps=  map.get(hd);
-		if(maps==null){
+		Stack<Integer> s2=  map.get(hd);
+		if(s2==null){
 			s1.add(root.key);
 			map.put(hd, s1);
 		}else{
-			maps.add(root.key);
-			map.put(hd, maps);
+			s2.add(root.key);
+			map.put(hd, s2);
 		}
 		
 		if(root.right!=null){

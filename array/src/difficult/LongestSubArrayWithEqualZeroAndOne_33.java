@@ -61,8 +61,8 @@ public class LongestSubArrayWithEqualZeroAndOne_33 {
             arr[i] = (arr[i] == -1) ? 0 : 1;
         }
  
-        int end = ending_index - max_len + 1;
-        System.out.println(end + " to " + ending_index);
+        int start = ending_index - max_len + 1;
+        System.out.println(start + " to " + ending_index);
  
         return max_len;
 	}

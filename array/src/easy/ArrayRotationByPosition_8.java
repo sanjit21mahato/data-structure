@@ -3,7 +3,7 @@ package easy;
 import java.util.Arrays;
 
 /**
- * @author sanji
+ * @author sanjit
  */
 
 /*

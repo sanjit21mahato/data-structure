@@ -22,8 +22,8 @@ public class RopeCuttingIntoMaxPiecesEachBeingInSubset_8 {
 		int a= 11;
 		int b= 9;
 		int c= 12;*/
-		int n=3,a=1,b=2;
-		int max =findMaximumCutPossible(n,a,b);
+		int n=13,a=8,b=7,c=3;
+		int max =findMaximumCutPossible(n,a,b,c);
 		System.out.println(max);
 		
 		/*int n = 23;
@@ -34,18 +34,27 @@ public class RopeCuttingIntoMaxPiecesEachBeingInSubset_8 {
 */
 	}
 	
-	private static int findMaximumCutPossible(int n, int a, int b) {
+	private static int findMaximumCutPossible(int n, int a, int b, int c) {
 
-		if (n < 0)
+		if (n < 0){
 			return -1;
-		if (n == 0)
+		}
+		if (n == 0) {
 			return 0;
-		int max = Math.max(findMaximumCutPossible(n - a, a, b), findMaximumCutPossible(n - b, a, b));
+		}
+/*		int max = Math.max(Math.max(findMaximumCutPossible(n - a, a, b,c), findMaximumCutPossible(n - b, a, b,c)), 
+				findMaximumCutPossible(n-c, a, b, c));*/
+		int temp1 = findMaximumCutPossible(n-a, a, b, c);
+		int temp2 = findMaximumCutPossible(n-b, a, b, c);
+		int temp3 = findMaximumCutPossible(n-c, a, b, c);
+		int pecies = Math.max((Math.max(temp1, temp2)), temp3);
 				
-		if (max == -1)
+		if (pecies == -1){
 			return -1;
-		else
-			return max + 1;
+		}
+		else {
+			return pecies + 1;
+		}
 	}
 	
     //Non Recursive Solution

@@ -25,9 +25,9 @@ public class AllPermutationsOfString_13 {
 				return;
 			}
 			for(int j=i;j<s.length();j++){
-				 s= swap(s,i,j);
+				 s=swap(s,i,j);
 				 printAllPermutationsOfString(s,i+1);
-				 swap(s,j,i);
+				 s=swap(s,j,i);
 			}
 		}
 
@@ -37,6 +37,7 @@ public class AllPermutationsOfString_13 {
 	    char tempArr[] = s.toCharArray();
 	    tempArr[i]= s.charAt(j);
 	    tempArr[j]=temp;
+	    
 	    return String.valueOf(tempArr);
 			
 		}

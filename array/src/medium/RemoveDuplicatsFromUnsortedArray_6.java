@@ -38,14 +38,6 @@ public class RemoveDuplicatsFromUnsortedArray_6 {
 	}
 	
 	private static void removeDuplicatesUsingJava8(int[] arr) {
-		ArrayList<Integer> numbersList = new ArrayList(Arrays.asList(arr));
-
-		List<Integer> list = numbersList.stream().distinct().collect(Collectors.toList());
-		for (Integer i : list) {
-			System.out.println(i);
-		}
-		// list.forEach(System.out::println);
-		// System.out.println();
 
 		int[] uniqueArrays = Arrays.stream(arr).distinct().toArray();
 		System.out.println(Arrays.toString(uniqueArrays));

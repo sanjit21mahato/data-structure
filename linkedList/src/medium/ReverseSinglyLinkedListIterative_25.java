@@ -33,6 +33,26 @@ public class ReverseSinglyLinkedListIterative_25 {
 			head=previous;
 			return head;
 		}
+		
+		/*
+		if(head==null){
+			return null;
+		}
+		Node currentNode =head;
+		Node previous=null;
+		Node temp=currentNode.next;
+		
+		while(temp!=null){
+			currentNode.next=previous;
+			previous=currentNode;
+			currentNode=temp;
+			temp=temp.next;
+		}
+		
+		currentNode.next=previous;
+			
+		return currentNode;
+		 */
 	}
 
 }

@@ -16,8 +16,14 @@ Sort the string which becomes "ABC" and find all permuatation in increasing orde
  
  Ex: "CBA"
   O/P: 6
+  
+Naive Solution: Find all permutation and add in TreeSet and compare the string and mainatain count. 
+In Worst case we need to n* Fact(n)
+Efficient Solution: in O(n)  
   */
 package difficult;
+
+import java.util.Arrays;
 
 /**
  * @author sanji
@@ -29,7 +35,7 @@ public class LexicographicRankofString_15 {
 
 	public static void main(String[] args) {
 		
-		String s1= "CBA";
+		String s1= "CAB";
 		int rank = findLexicographicRank(s1);
 		System.out.println(rank);
 
@@ -43,17 +49,18 @@ public class LexicographicRankofString_15 {
 		for(int i=0;i<n;i++){
 		 arr[s1.charAt(i)]++;	
 		}
+		System.out.println(Arrays.toString(arr));
 		for(int i=1;i<arr.length;i++){
 			arr[i]+=arr[i-1];
 		}
-		
+		System.out.println(Arrays.toString(arr));
 		for(int i=0;i<n-1;i++){
 			 fact = fact/(n-i);
 			rank= rank+arr[s1.charAt(i)-1]*fact;
 			for(int j= s1.charAt(i);j<arr.length;j++){
 				arr[j]--;
 			}
-			
+		System.out.println(Arrays.toString(arr));
 		}
 		return rank;
 	}

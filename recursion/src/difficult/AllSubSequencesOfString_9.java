@@ -46,15 +46,17 @@ public class AllSubSequencesOfString_9 {
 			
 		}
 		
-		 private static void printSubSequences(String s, String substring) {
+		 private static void printSubSequences(String s, String result) {
 				if(s.length()==0){
-					System.out.println(substring);
+					System.out.println(result);
 					return;
 				}
-				//not include character
-				printSubSequences(s.substring(1), substring);
 				//include character
-				printSubSequences(s.substring(1), substring+s.charAt(0));
+				printSubSequences(s.substring(1), result+s.charAt(0));
+				//not include character
+				printSubSequences(s.substring(1), result);
+				
+				
 				
 				
 			}

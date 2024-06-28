@@ -59,6 +59,7 @@ public class CheckForBalanceBinaryTree_11 {
 		if(lh==-1)return -1;
         int rh = chekHeights(root.right);
         if(rh==-1)return -1;
+        //point to be noted will go in else only when if does not return -1
         if(Math.abs(lh-rh)>1){
 			return -1;
         }

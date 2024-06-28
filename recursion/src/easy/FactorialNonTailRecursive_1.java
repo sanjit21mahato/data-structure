@@ -23,6 +23,11 @@ public class FactorialNonTailRecursive_1 {
 		
 	}
 
+	private static int calFact(int i, int n) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
 	private static int calFactorial(int n) {
 		if(n==1){
 			return 1;

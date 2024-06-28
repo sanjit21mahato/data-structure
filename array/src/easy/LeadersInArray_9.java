@@ -23,7 +23,7 @@ public class LeadersInArray_9 {
 	   int n = arr.length;
 	   int currentLeader=arr[n-1];
        System.out.print(arr[n-1] + " ");
-       for(int i=n-2; i>=0;i--){
+       for(int i=n-2;i>=0;i--){
     	  if(arr[i]>currentLeader){
     		  currentLeader =arr[i];
     		 System.out.print(arr[i] + " ");

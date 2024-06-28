@@ -1,5 +1,5 @@
 /**
- * 
+ Print fibbonaci series of a number
  */
 package external.easy;
 
@@ -16,7 +16,7 @@ public class FibbonacciSequence {
 
      int n=5;
      //1st way
-     /*int counter=2;
+     int counter=2;
      int pre =0;
      int current =1;
      System.out.println(0);
@@ -24,13 +24,13 @@ public class FibbonacciSequence {
      if(n>1){
       printFibonacciSequence(n,counter, current,pre); 
      }
-	*/
+	
      
      //2nd way
-     for(int i=0;i<=n;i++){
+    /* for(int i=0;i<=n;i++){
        int fib= fibonnaciSequnece(i);
        System.out.println(fib);
-     }
+     }*/
      
 	}
 
